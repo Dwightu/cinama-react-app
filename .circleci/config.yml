@@ -75,8 +75,8 @@ jobs:
     steps:
       - checkout
       - *show-current-branch-name
-      - *restore_cache
-      - *install-dependencies
+      - *install-aws-cli
+      - *build-project
       - run:
           name: Deploy to AWS cloudfront
           command: |
